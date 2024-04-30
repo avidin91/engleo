@@ -1,8 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Card, Flex, Typography } from 'antd';
+import { Button, Card, Flex, Typography, Image } from 'antd';
 import InfoWordsCompilations from '../../entities/infoWordsCompilations';
 import InfoRules from '../../entities/infoRules';
+import statistic from '../../shared/img/Статистика.png';
 
 const { Title, Text } = Typography;
 
@@ -31,6 +32,34 @@ const Info = () => {
 					<InfoWordsCompilations />
 					<InfoRules />
 				</Flex>
+				<Title level={3}>Больше подборок слов и правил в каталоге</Title>
+				<Button
+					size="large"
+					style={{ width: 500, height: 50, backgroundColor: '#b90000' }}
+					type="primary"
+				>
+					Каталог
+				</Button>
+				<Title level={3}>Просматривайте статистику в личном кабинете</Title>
+				<Card title={'Статистика по словам и правилам'}>
+					<Flex vertical gap={32}>
+						<Text>
+							Вы можете смотреть, что вы сейчас изучаете. Есть отдельная статистика
+							для слов и отдельная для правил. Все слова и правила разбиты по
+							столбцам, каждый столбец соответствует тому статусу, в котом они сейчас
+							находятся.
+						</Text>
+						<Image src={statistic} preview={false} />
+						<Flex vertical align="center" gap={16}>
+							<Text style={{ fontSize: 20 }}>
+								Регистрируйтесь, и вам станут доступны все наши слова и подборки.
+							</Text>
+							<Button size="large" style={{ width: 500, height: 50 }} type="primary">
+								Зарегистрироваться
+							</Button>
+						</Flex>
+					</Flex>
+				</Card>
 			</Flex>
 		</>
 	);

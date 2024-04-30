@@ -1,6 +1,6 @@
 import React from 'react';
 import { rules } from '../../mocks/rules';
-import { Button, Card, Flex, Typography } from 'antd';
+import { Button, Card, Divider, Flex, Typography } from 'antd';
 import { rulesGroups } from '../../mocks/rulesGroups';
 
 const { Title, Text } = Typography;
@@ -10,7 +10,7 @@ const InfoRules = () => {
 
 	return (
 		<Card style={{ width: 584 }} title="Правила">
-			{rulesGroups.map(({ title, group }) => {
+			{rulesGroups.slice(0, 4).map(({ title, group }) => {
 				const newRules = rules.filter((rule) => rule.groupId === group);
 				return (
 					<>
@@ -25,7 +25,7 @@ const InfoRules = () => {
 											title={rule.title}
 											key={rule.groupId}
 											size="small"
-											style={{ height: 190 }}
+											style={{ height: 190, border: '1px solid' }}
 										>
 											<Flex align="center">
 												<p>
@@ -39,7 +39,9 @@ const InfoRules = () => {
 									)
 								);
 							})}
-							<Button style={{ backgroundColor: '#ffff5e' }}>Показать все</Button>
+							<Button style={{ backgroundColor: '#ffd100' }} type="text">
+								Показать все
+							</Button>
 						</Flex>
 					</>
 				);

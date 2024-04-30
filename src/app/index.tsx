@@ -7,20 +7,18 @@ import './styles.css';
 const App = () => {
 	return (
 		<>
-			<Helmet>
-				<title>My Title1</title>
-			</Helmet>
+			{/*<Helmet>*/}
+			{/*	<title>My Title1</title>*/}
+			{/*</Helmet>*/}
 			<ConfigProvider
 				theme={{
 					components: {
 						Layout: {
-							headerBg: '#BAEEFF',
 							siderBg: '#BAEEFF',
 						},
 					},
 					token: {
 						colorPrimary: '#00B96B',
-						// colorBgContainer: '#F2BD27',
 					},
 				}}
 			>

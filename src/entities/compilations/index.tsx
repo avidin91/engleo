@@ -20,7 +20,7 @@ const Compilations = ({ title, group, small }: ICompilations) => {
 				{title}
 			</Title>
 
-			<Flex vertical gap={16} align="center">
+			<Flex vertical gap={16}>
 				{newCompilations.map((compilation, i) => {
 					return small ? (
 						i === 0 && (
@@ -35,19 +35,25 @@ const Compilations = ({ title, group, small }: ICompilations) => {
 									key={compilation.id}
 									small
 								/>
-								<Button style={{ backgroundColor: '#ffff5e' }}>Показать все</Button>
+								<Flex justify="center">
+									<Button style={{ backgroundColor: '#ffd100' }} type="text">
+										Показать все
+									</Button>
+								</Flex>
 							</>
 						)
 					) : (
-						<Compilation
-							id={compilation.id}
-							title={compilation.title}
-							titleInEnglish={compilation.titleInEnglish}
-							description={compilation.description}
-							image={compilation.image}
-							group={compilation.group}
-							key={compilation.id}
-						/>
+						<Flex vertical style={{ width: '800px', margin: '0 auto' }}>
+							<Compilation
+								id={compilation.id}
+								title={compilation.title}
+								titleInEnglish={compilation.titleInEnglish}
+								description={compilation.description}
+								image={compilation.image}
+								group={compilation.group}
+								key={compilation.id}
+							/>
+						</Flex>
 					);
 				})}
 			</Flex>

@@ -17,7 +17,7 @@ interface ICompilation {
 const Compilation = ({ title, titleInEnglish, description, image, group, small }: ICompilation) => {
 	return (
 		<Col span={24}>
-			<Card title={title} size="small" style={{ height: small ? '190px' : '' }}>
+			<Card title={title} size="small" style={{ height: small ? '190px' : '', border: '1px solid' }}>
 				<Flex align="center" justify="space-between" gap={8}>
 					<Flex vertical style={{ width: small ? '240px' : '600px' }} gap="8px">
 						<Text>{titleInEnglish}</Text>
