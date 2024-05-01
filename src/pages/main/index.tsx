@@ -13,7 +13,7 @@ const Main = () => {
 		<>
 			<Layout>
 				<HeaderComponent />
-				<Layout style={{ paddingBottom: 16 }}>
+				<Layout>
 					<Content style={{ minHeight }}>
 						<Outlet />
 					</Content>

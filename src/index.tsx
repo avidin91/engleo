@@ -6,6 +6,7 @@ import NotFound from './pages/not-found';
 import WordCompilations from './pages/wordCompilations';
 import Info from './pages/info';
 import About from './pages/about';
+import ContactUs from './pages/contact-us';
 
 const router = createBrowserRouter([
 	{
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
 			{
 				path: 'about',
 				element: <About />,
+			},
+			{
+				path: 'contact-us',
+				element: <ContactUs />,
 			},
 		],
 	},

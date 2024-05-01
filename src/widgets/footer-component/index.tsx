@@ -3,6 +3,7 @@ import { Button, ConfigProvider, Flex, Image, Layout, Typography } from 'antd';
 import './styles.css';
 import Icon from '@ant-design/icons';
 import TelegramLogoSvg from '../../shared/svg/TelegramLogoSvg';
+import { Link } from 'react-router-dom';
 
 const { Footer } = Layout;
 const { Text } = Typography;
@@ -27,9 +28,11 @@ const FooterComponent = () => {
 			<Footer>
 				<Flex vertical align="start" gap={8}>
 					<Flex gap={32}>
-						<Button type="link" className="footer-component-button">
-							Свяжитесь с нами
-						</Button>
+						<Link to={'contact-us'}>
+							<Button type="link" className="footer-component-button">
+								Свяжитесь с нами
+							</Button>
+						</Link>
 						<Button
 							type="link"
 							className="footer-component-button"
