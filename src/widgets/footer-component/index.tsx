@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, ConfigProvider, Flex, Image, Layout, Typography } from 'antd';
 import './styles.css';
 import Icon from '@ant-design/icons';
-import TelegramLogoSvg from '../../shared/svg/TelegramLogoSvg';
+import TelegramLogoSvg from '@shared/svg/TelegramLogoSvg';
 import { Link } from 'react-router-dom';
 
 const { Footer } = Layout;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Flex, Typography, Image } from 'antd';
-import jungle from '../../shared/img/about-background.jpeg';
-import meAbout from '../../shared/img/me-about.png';
+import jungle from '@shared/img/about-background.jpeg';
+import meAbout from '@shared/img/me-about.png';
 
 const { Title, Text } = Typography;
 

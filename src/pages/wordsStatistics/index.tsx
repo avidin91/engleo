@@ -1,6 +1,6 @@
 import React from 'react';
 import { Flex, Row, Typography } from 'antd';
-import Column from '../../entities/column';
+import Column from '@entities/column';
 import { Helmet } from 'react-helmet';
 
 const { Title } = Typography;

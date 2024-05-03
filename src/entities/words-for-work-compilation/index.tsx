@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Button, Flex, Image, Typography } from 'antd';
-import { TWord } from '../../shared/types';
+import { TWord } from '@shared/types';
 
 const { Text } = Typography;
 

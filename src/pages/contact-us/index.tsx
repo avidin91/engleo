@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Card, Flex, Form, FormProps, Input, Typography } from 'antd';
-import { minHeight } from '../../shared/constants/constants';
+import { minHeight } from '@shared/constants/constants';
 import TextArea from 'antd/es/input/TextArea';
 
 const { Title, Text } = Typography;

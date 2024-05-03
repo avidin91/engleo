@@ -11,7 +11,7 @@ export const wordCompilations = [
 		group: [0],
 	},
 	{
-		id: 1,
+		id: 2,
 		title: 'Выражения похвалы группа 2',
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
@@ -19,7 +19,7 @@ export const wordCompilations = [
 		group: [2],
 	},
 	{
-		id: 1,
+		id: 3,
 		title: 'Выражения похвалы группа 5',
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
@@ -27,7 +27,7 @@ export const wordCompilations = [
 		group: [5],
 	},
 	{
-		id: 1,
+		id: 4,
 		title: 'Выражения похвалы группа 4',
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
@@ -35,7 +35,7 @@ export const wordCompilations = [
 		group: [4],
 	},
 	{
-		id: 1,
+		id: 5,
 		title: 'Выражения похвалы группа 3',
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
@@ -43,7 +43,7 @@ export const wordCompilations = [
 		group: [3],
 	},
 	{
-		id: 1,
+		id: 6,
 		title: 'Выражения похвалы группа 1',
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
@@ -51,7 +51,7 @@ export const wordCompilations = [
 		group: [1],
 	},
 	{
-		id: 1,
+		id: 7,
 		title: 'Выражения похвалы группа 3',
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
@@ -59,7 +59,7 @@ export const wordCompilations = [
 		group: [3],
 	},
 	{
-		id: 1,
+		id: 8,
 		title: 'Выражения похвалы',
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
@@ -67,7 +67,7 @@ export const wordCompilations = [
 		group: [4],
 	},
 	{
-		id: 1,
+		id: 9,
 		title: 'Выражения похвалы',
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
@@ -75,7 +75,7 @@ export const wordCompilations = [
 		group: [5],
 	},
 	{
-		id: 1,
+		id: 10,
 		title: 'Выражения похвалы',
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
@@ -83,7 +83,7 @@ export const wordCompilations = [
 		group: [0, 1],
 	},
 	{
-		id: 1,
+		id: 11,
 		title: 'Выражения похвалы',
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
@@ -91,7 +91,7 @@ export const wordCompilations = [
 		group: [1, 2],
 	},
 	{
-		id: 1,
+		id: 12,
 		title: 'Выражения похвалы',
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
@@ -99,7 +99,7 @@ export const wordCompilations = [
 		group: [2, 3],
 	},
 	{
-		id: 1,
+		id: 13,
 		title: 'Выражения похвалы',
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
@@ -107,7 +107,7 @@ export const wordCompilations = [
 		group: [4, 5],
 	},
 	{
-		id: 1,
+		id: 14,
 		title: 'Выражения похвалы',
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
@@ -115,7 +115,7 @@ export const wordCompilations = [
 		group: [0, 5],
 	},
 	{
-		id: 1,
+		id: 15,
 		title: 'Выражения похвалы',
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
@@ -123,7 +123,7 @@ export const wordCompilations = [
 		group: [1, 5],
 	},
 	{
-		id: 1,
+		id: 16,
 		title: 'Выражения похвалы',
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
@@ -131,7 +131,7 @@ export const wordCompilations = [
 		group: [1, 3, 5],
 	},
 	{
-		id: 1,
+		id: 17,
 		title: 'Выражения похвалы',
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
@@ -139,7 +139,7 @@ export const wordCompilations = [
 		group: [2],
 	},
 	{
-		id: 1,
+		id: 18,
 		title: 'Выражения похвалы',
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
@@ -147,7 +147,7 @@ export const wordCompilations = [
 		group: [3],
 	},
 	{
-		id: 1,
+		id: 19,
 		title: 'Выражения похвалы',
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
@@ -155,7 +155,7 @@ export const wordCompilations = [
 		group: [3],
 	},
 	{
-		id: 1,
+		id: 20,
 		title: 'Выражения похвалы',
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
@@ -163,7 +163,7 @@ export const wordCompilations = [
 		group: [4],
 	},
 	{
-		id: 1,
+		id: 21,
 		title: 'Выражения похвалы',
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
@@ -171,7 +171,7 @@ export const wordCompilations = [
 		group: [5],
 	},
 	{
-		id: 1,
+		id: 22,
 		title: 'Выражения похвалы',
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
@@ -179,7 +179,7 @@ export const wordCompilations = [
 		group: [1],
 	},
 	{
-		id: 1,
+		id: 23,
 		title: 'Выражения похвалы',
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
@@ -187,7 +187,7 @@ export const wordCompilations = [
 		group: [1],
 	},
 	{
-		id: 1,
+		id: 24,
 		title: 'Выражения похвалы',
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
@@ -195,7 +195,7 @@ export const wordCompilations = [
 		group: [3],
 	},
 	{
-		id: 1,
+		id: 25,
 		title: 'Выражения похвалы',
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
@@ -203,7 +203,7 @@ export const wordCompilations = [
 		group: [4],
 	},
 	{
-		id: 1,
+		id: 26,
 		title: 'Выражения похвалы',
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
@@ -211,7 +211,7 @@ export const wordCompilations = [
 		group: [5],
 	},
 	{
-		id: 1,
+		id: 27,
 		title: 'Выражения похвалы',
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
@@ -219,7 +219,7 @@ export const wordCompilations = [
 		group: [2],
 	},
 	{
-		id: 1,
+		id: 28,
 		title: 'Выражения похвалы',
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
@@ -227,7 +227,7 @@ export const wordCompilations = [
 		group: [4],
 	},
 	{
-		id: 1,
+		id: 29,
 		title: 'Выражения похвалы',
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
@@ -235,7 +235,7 @@ export const wordCompilations = [
 		group: [3],
 	},
 	{
-		id: 1,
+		id: 30,
 		title: 'Выражения похвалы',
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
@@ -243,7 +243,7 @@ export const wordCompilations = [
 		group: [4],
 	},
 	{
-		id: 1,
+		id: 31,
 		title: 'Выражения похвалы',
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
@@ -251,7 +251,7 @@ export const wordCompilations = [
 		group: [0],
 	},
 	{
-		id: 1,
+		id: 32,
 		title: 'Выражения похвалы',
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
@@ -259,7 +259,7 @@ export const wordCompilations = [
 		group: [0, 1, 2, 3, 4, 5],
 	},
 	{
-		id: 1,
+		id: 33,
 		title: 'Выражения похвалы',
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
@@ -267,7 +267,7 @@ export const wordCompilations = [
 		group: [0, 1, 2, 3, 4, 5],
 	},
 	{
-		id: 1,
+		id: 34,
 		title: 'Выражения похвалы',
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
@@ -275,7 +275,7 @@ export const wordCompilations = [
 		group: [0, 1, 2, 3, 4, 5],
 	},
 	{
-		id: 1,
+		id: 35,
 		title: 'Выражения похвалы',
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
@@ -283,7 +283,7 @@ export const wordCompilations = [
 		group: [0, 1, 2, 3, 4, 5],
 	},
 	{
-		id: 1,
+		id: 36,
 		title: 'Выражения похвалы',
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
@@ -291,7 +291,7 @@ export const wordCompilations = [
 		group: [0, 1, 2, 3, 4, 5],
 	},
 	{
-		id: 1,
+		id: 37,
 		title: 'Выражения похвалы',
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
@@ -299,7 +299,7 @@ export const wordCompilations = [
 		group: [0, 1, 2, 3, 4, 5],
 	},
 	{
-		id: 1,
+		id: 38,
 		title: 'Выражения похвалы',
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
@@ -307,7 +307,7 @@ export const wordCompilations = [
 		group: [0, 1, 2, 3, 4, 5],
 	},
 	{
-		id: 1,
+		id: 39,
 		title: 'Выражения похвалы',
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',

@@ -2,7 +2,7 @@ import React, { FC, useEffect, useState } from 'react';
 import { Button, Flex, Image, message, Progress, Steps, theme, Typography } from 'antd';
 import { PlayCircleTwoTone } from '@ant-design/icons';
 import useVoice from '../../shared/hooks/useVoice';
-import { TWord } from '../../shared/types';
+import { TWord } from '@shared/types';
 
 const { Text } = Typography;
 

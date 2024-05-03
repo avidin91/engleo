@@ -10,7 +10,12 @@ const App = () => {
 				theme={{
 					components: {
 						Layout: {
-							siderBg: '#BAEEFF',
+							siderBg: '#222222',
+							triggerBg: '#444444',
+						},
+						Menu: {
+							darkItemBg: '#222222',
+							itemSelectedBg: '#0074bf',
 						},
 					},
 					token: {

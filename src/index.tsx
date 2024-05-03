@@ -19,7 +19,7 @@ const router = createBrowserRouter([
 				element: <Info />,
 			},
 			{
-				path: 'words-in-work-compilations',
+				path: 'words-compilations',
 				element: <WordCompilations />,
 			},
 			{

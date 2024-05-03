@@ -1,6 +1,6 @@
 import React from 'react';
 import { Avatar, Button, Card, Col, Flex, Tag, Typography } from 'antd';
-import { CompilationsTags } from '../../shared/constants/compilations-tags';
+import { CompilationsTags } from '@shared/constants/compilations-tags';
 
 const { Text } = Typography;
 
@@ -17,7 +17,7 @@ interface ICompilation {
 const Compilation = ({ title, titleInEnglish, description, image, group, small }: ICompilation) => {
 	return (
 		<Col span={24}>
-			<Card title={title} size="small" style={{ height: small ? '190px' : '', border: '1px solid' }}>
+			<Card title={title} size="small" style={{ height: small ? '190px' : '' }}>
 				<Flex align="center" justify="space-between" gap={8}>
 					<Flex vertical style={{ width: small ? '240px' : '600px' }} gap="8px">
 						<Text>{titleInEnglish}</Text>

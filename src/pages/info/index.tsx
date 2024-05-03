@@ -1,9 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Button, Card, Flex, Typography, Image } from 'antd';
-import InfoWordsCompilations from '../../entities/infoWordsCompilations';
-import InfoRules from '../../entities/infoRules';
-import statistic from '../../shared/img/Статистика.png';
+import InfoWordsCompilations from '@entities/infoWordsCompilations';
+import InfoRules from '@entities/infoRules';
+import statistic from '@shared/img/Статистика.png';
 
 const { Title, Text } = Typography;
 

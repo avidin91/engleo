@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Avatar, Button, Checkbox, Flex, Form, Input, Modal, Typography } from 'antd';
 import Link from 'antd/es/typography/Link';
-import vkLogo from '../../shared/img/vk-logo.png';
-import yaLogo from '../../shared/img/ya-logo.png';
+import vkLogo from '@shared/img/vk-logo.png';
+import yaLogo from '@shared/img/ya-logo.png';
 
 const { Title, Text } = Typography;
 
@@ -33,7 +33,6 @@ const SingIn = () => {
 				type="primary"
 				onClick={showModal}
 				style={{ backgroundColor: '#fdc90d', color: 'black' }}
-				size="large"
 			>
 				Войти
 			</Button>

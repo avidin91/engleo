@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Card, Flex } from 'antd';
-import { minHeight } from '../../shared/constants/constants';
+import { minHeight } from '@shared/constants/constants';
 import { Helmet } from 'react-helmet';
-import WordsForWorkCompilation from '../../entities/words-for-work-compilation';
-import WordsInWork from '../../entities/words-in-work';
+import WordsForWorkCompilation from '@entities/words-for-work-compilation';
+import WordsInWork from '@entities/words-in-work';
 
 type TCompilation = {
 	word: string;
