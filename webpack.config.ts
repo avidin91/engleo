@@ -38,6 +38,10 @@ export default (env: EnvVariables) => {
 					test: /\.(png|svg|jpg|jpeg|gif)$/i,
 					type: 'asset/resource',
 				},
+				{
+					test: /\.ico$/,
+					type: 'asset/resource',
+				},
 			],
 		},
 		resolve: {
@@ -53,6 +57,7 @@ export default (env: EnvVariables) => {
 		plugins: [
 			new HtmlWebpackPlugin({
 				template: path.resolve(__dirname, 'src', 'index.html'),
+				favicon: path.resolve(__dirname, 'src', 'favicon.ico'),
 			}),
 			new CleanWebpackPlugin(),
 			new webpack.DefinePlugin({

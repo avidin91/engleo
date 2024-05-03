@@ -2,21 +2,25 @@ import React from 'react';
 import { Button, Col, Flex, Row, Typography } from 'antd';
 import { wordCompilations } from '../../mocks/wordCompilations';
 import Compilation from '../compilation';
+import { Link } from 'react-router-dom';
+import { wordsCompilations } from '@shared/constants/urls';
 
 const { Title } = Typography;
 
 interface ICompilations {
 	title: string;
 	group: number;
+	slug?: string;
 	small?: boolean;
+	h1?: boolean;
 }
 
-const Compilations = ({ title, group, small }: ICompilations) => {
+const Compilations = ({ title, group, small, slug, h1 }: ICompilations) => {
 	const newCompilations = wordCompilations.filter((c) => c.group.includes(group));
 
 	return (
 		<>
-			<Title level={3} style={{ textAlign: 'center' }}>
+			<Title level={h1 ? 1 : 3} style={{ textAlign: 'center' }}>
 				{title}
 			</Title>
 
@@ -36,9 +40,16 @@ const Compilations = ({ title, group, small }: ICompilations) => {
 									small
 								/>
 								<Flex justify="center">
-									<Button style={{ backgroundColor: '#ffd100' }} type="text">
-										Показать все
-									</Button>
+									{slug && (
+										<Link to={`${wordsCompilations}/${slug}`}>
+											<Button
+												style={{ backgroundColor: '#ffd100' }}
+												type="text"
+											>
+												Показать все
+											</Button>
+										</Link>
+									)}
 								</Flex>
 							</>
 						)

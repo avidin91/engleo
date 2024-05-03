@@ -1,32 +1,42 @@
-import React, { useState } from 'react';
+import React, { useLayoutEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Flex, Layout, Menu, MenuProps, Typography } from 'antd';
+import { headerHeight, minHeight, minHeightWithoutHeader } from '@shared/constants/constants';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { wordCompilationGroups } from '../../mocks/wordCompilationGroups';
 import Compilations from '@entities/compilations';
-import { headerHeight } from '@shared/constants/constants';
-import { menuWordGroups } from '../../mocks/menuWordGroups';
-import './styles.css';
+import { wordsCompilations } from '@shared/constants/urls';
 
-const { Sider } = Layout;
+const { Sider, Content } = Layout;
 const { Title } = Typography;
 
-const items1: MenuProps['items'] = menuWordGroups.map((compilation) => ({
+const items1: MenuProps['items'] = wordCompilationGroups.map((compilation) => ({
 	key: compilation.group,
 	label: compilation.title,
 }));
 
 const WordCompilations = () => {
-	const [collapsed, setCollapsed] = useState(false);
-	const [siderWidth, setSiderWidth] = useState(300);
-	const [activeMenuItem, setActiveMenuItem] = useState(6);
+	const navigate = useNavigate();
+	const { slug } = useParams();
+	const [compilationFromUrl] = wordCompilationGroups.filter((group) => group.slug === slug);
 
-	const onCollapse = (isCollapsed: any) => {
-		isCollapsed ? setSiderWidth(80) : setSiderWidth(300);
-		setCollapsed(isCollapsed);
-	};
+	const [currentGroup, setCurrentGroup] = useState(slug ? compilationFromUrl.group : 6);
+
+	const { pathname } = useLocation();
+
+	useLayoutEffect(() => {
+		window.scrollTo(0, 0); // Прокрутка страницы к верху при изменении маршрута
+	}, [pathname]);
 
 	const onMenuSelect = ({ key }: { key: string }) => {
-		setActiveMenuItem(Number(key));
+		const keyNumber = Number(key);
+		const [wordCompilationGroup] = wordCompilationGroups.filter(
+			(item) => item.group === keyNumber,
+		);
+		const slug = wordCompilationGroup.slug;
+
+		setCurrentGroup(keyNumber);
+		navigate(slug ? `/${wordsCompilations}/${slug}` : `/${wordsCompilations}`);
 	};
 
 	return (
@@ -34,52 +44,54 @@ const WordCompilations = () => {
 			<Helmet>
 				<title>Подборки слов</title>
 			</Helmet>
-			<Layout hasSider>
+			<Layout hasSider style={{ minHeight }}>
 				<Sider
 					width={300}
 					style={{
 						overflow: 'auto',
-						position: 'fixed',
+						position: 'sticky',
 						left: 0,
-						top: 0,
+						top: headerHeight,
 						bottom: 0,
-						paddingTop: headerHeight,
-						zIndex: 1,
+						height: minHeightWithoutHeader,
+						paddingTop: 16,
 					}}
-					collapsible
-					collapsed={collapsed}
-					onCollapse={onCollapse}
 				>
 					<Menu
 						items={items1}
 						theme="dark"
-						defaultSelectedKeys={['6']}
+						defaultSelectedKeys={[`${currentGroup}`]}
 						onSelect={onMenuSelect}
 					/>
 				</Sider>
-				<Layout style={{ marginLeft: siderWidth, padding: '16px 0' }}>
+				<Content style={{ padding: '16px 0' }}>
 					<Flex align="center" vertical>
 						<div>
-							{activeMenuItem === 6 ? (
+							{currentGroup === 6 ? (
 								<Flex vertical align="center">
 									<Title style={{ margin: 0 }}>Подборки слов</Title>
-									{wordCompilationGroups.map((compilation, groupNumber) => (
-										<Compilations
-											title={compilation.title}
-											group={compilation.group}
-											key={groupNumber}
-										/>
-									))}
+									{wordCompilationGroups.map((compilation, groupNumber) => {
+										return (
+											groupNumber !== 6 && (
+												<Compilations
+													title={compilation.title}
+													group={compilation.group}
+													key={groupNumber}
+												/>
+											)
+										);
+									})}
 								</Flex>
 							) : (
 								<Compilations
-									title={wordCompilationGroups[activeMenuItem].title}
-									group={wordCompilationGroups[activeMenuItem].group}
+									title={wordCompilationGroups[currentGroup!].title}
+									group={wordCompilationGroups[currentGroup!].group}
+									h1
 								/>
 							)}
 						</div>
 					</Flex>
-				</Layout>
+				</Content>
 			</Layout>
 		</>
 	);

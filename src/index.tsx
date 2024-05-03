@@ -7,6 +7,7 @@ import WordCompilations from './pages/wordCompilations';
 import Info from './pages/info';
 import About from './pages/about';
 import ContactUs from './pages/contact-us';
+import { about, contactUs, wordsCompilations } from '@shared/constants/urls';
 
 const router = createBrowserRouter([
 	{
@@ -19,15 +20,15 @@ const router = createBrowserRouter([
 				element: <Info />,
 			},
 			{
-				path: 'words-compilations',
+				path: `${wordsCompilations}/:slug?`,
 				element: <WordCompilations />,
 			},
 			{
-				path: 'about',
+				path: about,
 				element: <About />,
 			},
 			{
-				path: 'contact-us',
+				path: contactUs,
 				element: <ContactUs />,
 			},
 		],
