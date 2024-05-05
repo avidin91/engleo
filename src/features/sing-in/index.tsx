@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { FC, useState } from 'react';
 import { Avatar, Button, Checkbox, Flex, Form, Input, Modal, Typography } from 'antd';
 import Link from 'antd/es/typography/Link';
 import vkLogo from '@shared/img/vk-logo.png';
@@ -12,7 +12,12 @@ type FieldType = {
 	remember?: string;
 };
 
-const SingIn = () => {
+type TSingIn = {
+	text: string;
+	button: 'small' | 'large';
+};
+
+const SingIn: FC<TSingIn> = ({ text, button }) => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
 
 	const showModal = () => {
@@ -29,13 +34,25 @@ const SingIn = () => {
 
 	return (
 		<>
-			<Button
-				type="primary"
-				onClick={showModal}
-				style={{ backgroundColor: '#fdc90d', color: 'black' }}
-			>
-				Войти
-			</Button>
+			{button === 'small' && (
+				<Button
+					type="primary"
+					onClick={showModal}
+					style={{ backgroundColor: '#fdc90d', color: 'black' }}
+				>
+					Войти
+				</Button>
+			)}
+			{button === 'large' && (
+				<Button
+					size="large"
+					style={{ width: 500, height: 50 }}
+					type="primary"
+					onClick={showModal}
+				>
+					{text}
+				</Button>
+			)}
 			<Modal open={isModalOpen} onOk={handleOk} onCancel={handleCancel} footer={null}>
 				<Flex vertical align="center">
 					<Title level={3}>Вход в профиль</Title>

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Button, Col, Flex, Row, Typography } from 'antd';
+import { Button, Flex, Typography } from 'antd';
 import { wordCompilations } from '../../mocks/wordCompilations';
-import Compilation from '../compilation';
+import WordCompilation from '../word-compilation';
 import { Link } from 'react-router-dom';
 import { wordsCompilations } from '@shared/constants/urls';
 
@@ -15,7 +15,7 @@ interface ICompilations {
 	h1?: boolean;
 }
 
-const Compilations = ({ title, group, small, slug, h1 }: ICompilations) => {
+const WordCompilations = ({ title, group, small, slug, h1 }: ICompilations) => {
 	const newCompilations = wordCompilations.filter((c) => c.group.includes(group));
 
 	return (
@@ -29,13 +29,14 @@ const Compilations = ({ title, group, small, slug, h1 }: ICompilations) => {
 					return small ? (
 						i === 0 && (
 							<>
-								<Compilation
+								<WordCompilation
 									id={compilation.id}
 									title={compilation.title}
 									titleInEnglish={compilation.titleInEnglish}
 									description={compilation.description}
 									image={compilation.image}
 									group={compilation.group}
+									slug={compilation.slug}
 									key={compilation.id}
 									small
 								/>
@@ -55,13 +56,14 @@ const Compilations = ({ title, group, small, slug, h1 }: ICompilations) => {
 						)
 					) : (
 						<Flex vertical style={{ width: '800px', margin: '0 auto' }}>
-							<Compilation
+							<WordCompilation
 								id={compilation.id}
 								title={compilation.title}
 								titleInEnglish={compilation.titleInEnglish}
 								description={compilation.description}
 								image={compilation.image}
 								group={compilation.group}
+								slug={compilation.slug}
 								key={compilation.id}
 							/>
 						</Flex>
@@ -72,4 +74,4 @@ const Compilations = ({ title, group, small, slug, h1 }: ICompilations) => {
 	);
 };
 
-export default Compilations;
+export default WordCompilations;

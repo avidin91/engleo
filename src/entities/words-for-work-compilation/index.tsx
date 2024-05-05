@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { Button, Flex, Image, Typography } from 'antd';
 import { TWord } from '@shared/types';
+import useScrollToTop from '@shared/hooks/useScrollToTop';
 
 const { Text } = Typography;
 
@@ -10,6 +11,8 @@ type TWordsInWork = {
 };
 
 const WordsForWorkCompilation: FC<TWordsInWork> = ({ compilation, handleSetStarted }) => {
+	useScrollToTop();
+
 	return (
 		<Flex align="center" vertical gap={32}>
 			<Flex style={{ width: '848px' }} wrap="wrap" gap={16} justify="start">

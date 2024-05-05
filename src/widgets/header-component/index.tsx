@@ -4,6 +4,7 @@ import logo from '@shared/img/logo.svg';
 import SingIn from '@features/sing-in';
 import { Link } from 'react-router-dom';
 import './styles.css';
+import { wordsCompilations } from '@shared/constants/urls';
 
 const { Text } = Typography;
 const { Header } = Layout;
@@ -37,18 +38,18 @@ const HeaderComponent = () => {
 				</Flex>
 
 				<Flex align="center" gap={8}>
-					<Link to={'/words-compilations'}>
+					<Link to={wordsCompilations}>
 						<Button type="text">Подборки слов</Button>
 					</Link>
 
-					<Link to={'/rules-compilations'}>
+					<Link to={'/rules-word-compilations'}>
 						<Button type="text">Подборки правил</Button>
 					</Link>
 
 					<Link to={'/about'}>
 						<Button type="text">О нас</Button>
 					</Link>
-					<SingIn />
+					<SingIn text="Войти" button="small" />
 				</Flex>
 			</Header>
 		</ConfigProvider>

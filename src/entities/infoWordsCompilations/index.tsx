@@ -1,7 +1,7 @@
 import React from 'react';
 import { wordCompilationGroups } from '../../mocks/wordCompilationGroups';
-import Compilations from '../compilations';
 import { Card, Flex } from 'antd';
+import WordCompilations from '../word-compilations';
 
 const InfoWordsCompilations = () => {
 	return (
@@ -9,7 +9,7 @@ const InfoWordsCompilations = () => {
 			<Flex vertical justify="center" gap={32}>
 				<div>
 					{wordCompilationGroups.slice(0, 4).map((compilation) => (
-						<Compilations
+						<WordCompilations
 							title={compilation.title}
 							group={compilation.group}
 							slug={compilation.slug}

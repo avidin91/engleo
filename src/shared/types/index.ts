@@ -4,6 +4,6 @@ export type TWord = {
 	example: string;
 	exampleTranslation: string;
 	image: string;
-	group: number[];
+	wordCompilationsIds: number[];
 	compilationName: string;
 };

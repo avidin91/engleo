@@ -4,6 +4,7 @@ import { Button, Card, Flex, Typography, Image } from 'antd';
 import InfoWordsCompilations from '@entities/infoWordsCompilations';
 import InfoRules from '@entities/infoRules';
 import statistic from '@shared/img/Статистика.png';
+import SingIn from '@features/sing-in';
 
 const { Title, Text } = Typography;
 
@@ -54,9 +55,7 @@ const Info = () => {
 							<Text style={{ fontSize: 20 }}>
 								Регистрируйтесь, и вам станут доступны все наши слова и подборки.
 							</Text>
-							<Button size="large" style={{ width: 500, height: 50 }} type="primary">
-								Зарегистрироваться
-							</Button>
+							<SingIn text="Зарегистрироваться" button="large" />
 						</Flex>
 					</Flex>
 				</Card>

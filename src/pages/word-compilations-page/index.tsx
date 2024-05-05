@@ -1,32 +1,28 @@
-import React, { useLayoutEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Flex, Layout, Menu, MenuProps, Typography } from 'antd';
 import { headerHeight, minHeight, minHeightWithoutHeader } from '@shared/constants/constants';
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { wordCompilationGroups } from '../../mocks/wordCompilationGroups';
-import Compilations from '@entities/compilations';
+import Compilations from '../../entities/word-compilations';
 import { wordsCompilations } from '@shared/constants/urls';
+import useScrollToTop from '@shared/hooks/useScrollToTop';
 
 const { Sider, Content } = Layout;
 const { Title } = Typography;
 
-const items1: MenuProps['items'] = wordCompilationGroups.map((compilation) => ({
+const items: MenuProps['items'] = wordCompilationGroups.map((compilation) => ({
 	key: compilation.group,
 	label: compilation.title,
 }));
 
-const WordCompilations = () => {
+const WordCompilationsPage = () => {
+	useScrollToTop();
 	const navigate = useNavigate();
-	const { slug } = useParams();
-	const [compilationFromUrl] = wordCompilationGroups.filter((group) => group.slug === slug);
+	const { groupTitle } = useParams();
+	const [compilationFromUrl] = wordCompilationGroups.filter((group) => group.slug === groupTitle);
 
-	const [currentGroup, setCurrentGroup] = useState(slug ? compilationFromUrl.group : 6);
-
-	const { pathname } = useLocation();
-
-	useLayoutEffect(() => {
-		window.scrollTo(0, 0); // Прокрутка страницы к верху при изменении маршрута
-	}, [pathname]);
+	const [currentGroup, setCurrentGroup] = useState(groupTitle ? compilationFromUrl.group : 6);
 
 	const onMenuSelect = ({ key }: { key: string }) => {
 		const keyNumber = Number(key);
@@ -58,7 +54,7 @@ const WordCompilations = () => {
 					}}
 				>
 					<Menu
-						items={items1}
+						items={items}
 						theme="dark"
 						defaultSelectedKeys={[`${currentGroup}`]}
 						onSelect={onMenuSelect}
@@ -97,4 +93,4 @@ const WordCompilations = () => {
 	);
 };
 
-export default WordCompilations;
+export default WordCompilationsPage;
