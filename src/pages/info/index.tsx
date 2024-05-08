@@ -1,10 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Button, Card, Flex, Typography, Image } from 'antd';
-import InfoWordsCompilations from '@entities/infoWordsCompilations';
-import InfoRules from '@entities/infoRules';
+import { Card, Flex, Typography, Image } from 'antd';
 import statistic from '@shared/img/Статистика.png';
 import SingIn from '@features/sing-in';
+import CompilationsMiniWidget from '@widgets/compilations-mini-widget';
+import { wordCompilationGroups } from '../../mocks/wordCompilationGroups';
+import { rulesCompilations, wordsCompilations } from '@shared/constants/urls';
+import { rulesGroups } from '../../mocks/rulesGroups';
 
 const { Title, Text } = Typography;
 
@@ -30,17 +32,17 @@ const Info = () => {
 				</Card>
 				<Title level={3}>Выберите интересующую вас категорию</Title>
 				<Flex gap={32} flex={1}>
-					<InfoWordsCompilations />
-					<InfoRules />
+					<CompilationsMiniWidget
+						title="Слова"
+						groups={wordCompilationGroups}
+						parentLink={wordsCompilations}
+					/>
+					<CompilationsMiniWidget
+						title="Правила"
+						groups={rulesGroups}
+						parentLink={rulesCompilations}
+					/>
 				</Flex>
-				<Title level={3}>Больше подборок слов и правил в каталоге</Title>
-				<Button
-					size="large"
-					style={{ width: 500, height: 50, backgroundColor: '#b90000' }}
-					type="primary"
-				>
-					Каталог
-				</Button>
 				<Title level={3}>Просматривайте статистику в личном кабинете</Title>
 				<Card title={'Статистика по словам и правилам'}>
 					<Flex vertical gap={32}>

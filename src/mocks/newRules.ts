@@ -1,8 +1,8 @@
-export const rules = [
+export const newRules = [
 	{
 		id: 1,
 		title: 'Алфавит и произношение',
-		groupId: 0,
+		group: [0],
 		description:
 			'Описание правила, как используется, для чего нужно, что-то ещё. Описание правила, как используется, для чего нужно, что-то ещё.',
 		slug: 'alfavit-i-proiznoshenie',
@@ -10,7 +10,7 @@ export const rules = [
 	{
 		id: 2,
 		title: 'Части речи (существительные, прилагательные, глаголы и т.д.)',
-		groupId: 0,
+		group: [0],
 		description:
 			'Описание правила, как используется, для чего нужно, что-то ещё. Описание правила, как используется, для чего нужно, что-то ещё.',
 		slug: 'chasti-rechi-syshestvitilnie-prilagatelnie-glagoli-i-t-d',
@@ -18,7 +18,7 @@ export const rules = [
 	{
 		id: 3,
 		title: 'Образование множественного числа существительных',
-		groupId: 0,
+		group: [1],
 		description:
 			'Описание правила, как используется, для чего нужно, что-то ещё. Описание правила, как используется, для чего нужно, что-то ещё.',
 		slug: 'obrazovanie-mnojestvennogo-chisla-syshestvitelnih',
@@ -26,7 +26,7 @@ export const rules = [
 	{
 		id: 4,
 		title: 'Образование степеней сравнения прилагательных',
-		groupId: 0,
+		group: [1],
 		description:
 			'Описание правила, как используется, для чего нужно, что-то ещё. Описание правила, как используется, для чего нужно, что-то ещё.',
 		slug: 'obrazovanie-stepenei-sravneniya-prilagatelnih',
@@ -34,7 +34,7 @@ export const rules = [
 	{
 		id: 5,
 		title: 'Образование простых и сложных предложений',
-		groupId: 0,
+		group: [2],
 		description:
 			'Описание правила, как используется, для чего нужно, что-то ещё. Описание правила, как используется, для чего нужно, что-то ещё.',
 		slug: 'obrazovanie-prostih-i-slojnih-predlojenii',
@@ -42,7 +42,7 @@ export const rules = [
 	{
 		id: 6,
 		title: 'Простое настоящее время (Simple Present)',
-		groupId: 1,
+		group: [2],
 		description:
 			'Описание правила, как используется, для чего нужно, что-то ещё. Описание правила, как используется, для чего нужно, что-то ещё.',
 		slug: 'prostoe-nastoyashee-vremya-simple-present',
@@ -50,7 +50,7 @@ export const rules = [
 	{
 		id: 7,
 		title: 'Простое прошедшее время (Simple Past)',
-		groupId: 1,
+		group: [3],
 		description:
 			'Описание правила, как используется, для чего нужно, что-то ещё. Описание правила, как используется, для чего нужно, что-то ещё.',
 		slug: 'prostoe-proshedshee-vremya-simple-past',
@@ -58,7 +58,7 @@ export const rules = [
 	{
 		id: 8,
 		title: 'Простое будущее время (Simple Future)',
-		groupId: 1,
+		group: [3],
 		description:
 			'Описание правила, как используется, для чего нужно, что-то ещё. Описание правила, как используется, для чего нужно, что-то ещё.',
 		slug: 'prostoe-bydyshee-vremya-simple-future',
@@ -66,7 +66,7 @@ export const rules = [
 	{
 		id: 9,
 		title: 'Настоящее продолженное время (Present Continuous)',
-		groupId: 1,
+		group: [4],
 		description:
 			'Описание правила, как используется, для чего нужно, что-то ещё. Описание правила, как используется, для чего нужно, что-то ещё.',
 		slug: 'nastoyashee-prodoljennoe-vremya-present-continious',
@@ -74,7 +74,7 @@ export const rules = [
 	{
 		id: 10,
 		title: 'Настоящее совершенное время (Present Perfect)',
-		groupId: 1,
+		group: [4],
 		description:
 			'Описание правила, как используется, для чего нужно, что-то ещё. Описание правила, как используется, для чего нужно, что-то ещё.',
 		slug: 'nastoyashee-sovershennoe-vremya-present-perfect',
@@ -82,7 +82,7 @@ export const rules = [
 	{
 		id: 11,
 		title: 'Прошедшее совершенное время (Past Perfect)',
-		groupId: 1,
+		group: [5],
 		description:
 			'Описание правила, как используется, для чего нужно, что-то ещё. Описание правила, как используется, для чего нужно, что-то ещё.',
 		slug: 'proshedshee-sovershennoe-vremya-past-perfect',
@@ -90,7 +90,7 @@ export const rules = [
 	{
 		id: 12,
 		title: 'Будущее совершенное время (Future Perfect)',
-		groupId: 1,
+		group: [5],
 		description:
 			'Описание правила, как используется, для чего нужно, что-то ещё. Описание правила, как используется, для чего нужно, что-то ещё.',
 		slug: 'bydyshee-sovershennoe-vremya-future-perfect',
@@ -98,7 +98,7 @@ export const rules = [
 	{
 		id: 13,
 		title: 'Настоящее совершенное продолженное время (Present Perfect Continuous)',
-		groupId: 1,
+		group: [6],
 		description:
 			'Описание правила, как используется, для чего нужно, что-то ещё. Описание правила, как используется, для чего нужно, что-то ещё.',
 		slug: 'nastoyashee-sovershennoe-prodoljitelnoe-vremya-present-perfect-continious',
@@ -106,7 +106,7 @@ export const rules = [
 	{
 		id: 14,
 		title: 'Прошедшее совершенное продолженное время (Past Perfect Continuous)',
-		groupId: 1,
+		group: [6],
 		description:
 			'Описание правила, как используется, для чего нужно, что-то ещё. Описание правила, как используется, для чего нужно, что-то ещё.',
 		slug: 'proshedshee-sovershennoe-prodoljitelnoe-vremya-past-perfect-continios',
@@ -114,7 +114,7 @@ export const rules = [
 	{
 		id: 15,
 		title: 'Будущее совершенное продолженное время (Future Perfect Continuous)',
-		groupId: 1,
+		group: [0],
 		description:
 			'Описание правила, как используется, для чего нужно, что-то ещё. Описание правила, как используется, для чего нужно, что-то ещё.',
 		slug: 'bydyshee-sovershennoe-prodoljitelnoe-vremya-future-perfect-continious',
@@ -122,7 +122,7 @@ export const rules = [
 	{
 		id: 16,
 		title: 'Образование пассивных конструкций',
-		groupId: 2,
+		group: [1],
 		description:
 			'Описание правила, как используется, для чего нужно, что-то ещё. Описание правила, как используется, для чего нужно, что-то ещё.',
 		slug: 'obrazovanie-passivnih-constrykcii',
@@ -130,7 +130,7 @@ export const rules = [
 	{
 		id: 17,
 		title: 'Использование пассивного залога в различных временах',
-		groupId: 2,
+		group: [2],
 		description:
 			'Описание правила, как используется, для чего нужно, что-то ещё. Описание правила, как используется, для чего нужно, что-то ещё.',
 		slug: 'isspolzovanie-passivnogo-zaloga-v-razlichnih-vremenah',
@@ -138,7 +138,7 @@ export const rules = [
 	{
 		id: 18,
 		title: 'Первый тип условных предложений (First Conditional)',
-		groupId: 3,
+		group: [3],
 		description:
 			'Описание правила, как используется, для чего нужно, что-то ещё. Описание правила, как используется, для чего нужно, что-то ещё.',
 		slug: 'pervii-tip-yclovnih-predlozhenii-first-conditional',
@@ -146,7 +146,7 @@ export const rules = [
 	{
 		id: 19,
 		title: 'Второй тип условных предложений (Second Conditional)',
-		groupId: 3,
+		group: [4],
 		description:
 			'Описание правила, как используется, для чего нужно, что-то ещё. Описание правила, как используется, для чего нужно, что-то ещё.',
 		slug: 'vtoroi-tip-yclovnih-predlozhenii-second-conditional',
@@ -154,7 +154,7 @@ export const rules = [
 	{
 		id: 20,
 		title: 'Третий тип условных предложений (Third Conditional)',
-		groupId: 3,
+		group: [5],
 		description:
 			'Описание правила, как используется, для чего нужно, что-то ещё. Описание правила, как используется, для чего нужно, что-то ещё.',
 		slug: 'tretii-tip-yclovnih-predlozhenii-third-conditional',
@@ -162,7 +162,7 @@ export const rules = [
 	{
 		id: 21,
 		title: 'Нулевой тип условных предложений (Zero Conditional)',
-		groupId: 3,
+		group: [6],
 		description:
 			'Описание правила, как используется, для чего нужно, что-то ещё. Описание правила, как используется, для чего нужно, что-то ещё.',
 		slug: 'nylevoi-tip-yclovnih-predlozhenii-zero-conditional',
@@ -170,7 +170,7 @@ export const rules = [
 	{
 		id: 22,
 		title: 'Can, Could',
-		groupId: 4,
+		group: [1],
 		description:
 			'Описание правила, как используется, для чего нужно, что-то ещё. Описание правила, как используется, для чего нужно, что-то ещё.',
 		slug: 'can-could',
@@ -178,7 +178,7 @@ export const rules = [
 	{
 		id: 23,
 		title: 'Will, Would',
-		groupId: 4,
+		group: [2],
 		description:
 			'Описание правила, как используется, для чего нужно, что-то ещё. Описание правила, как используется, для чего нужно, что-то ещё.',
 		slug: 'will-would',
@@ -186,7 +186,7 @@ export const rules = [
 	{
 		id: 24,
 		title: 'Shall, Should',
-		groupId: 4,
+		group: [4],
 		description:
 			'Описание правила, как используется, для чего нужно, что-то ещё. Описание правила, как используется, для чего нужно, что-то ещё.',
 		slug: 'shall-should',
@@ -194,7 +194,7 @@ export const rules = [
 	{
 		id: 25,
 		title: 'May, Might',
-		groupId: 4,
+		group: [4],
 		description:
 			'Описание правила, как используется, для чего нужно, что-то ещё. Описание правила, как используется, для чего нужно, что-то ещё.',
 		slug: 'may-might',
@@ -202,7 +202,7 @@ export const rules = [
 	{
 		id: 26,
 		title: 'Must',
-		groupId: 4,
+		group: [4],
 		description:
 			'Описание правила, как используется, для чего нужно, что-то ещё. Описание правила, как используется, для чего нужно, что-то ещё.',
 		slug: 'must',
@@ -210,7 +210,7 @@ export const rules = [
 	{
 		id: 27,
 		title: 'Определительные придаточные',
-		groupId: 5,
+		group: [5],
 		description:
 			'Описание правила, как используется, для чего нужно, что-то ещё. Описание правила, как используется, для чего нужно, что-то ещё.',
 		slug: 'opredelitilnie-pridatochnie',
@@ -218,7 +218,7 @@ export const rules = [
 	{
 		id: 28,
 		title: 'Присоединительные придаточные',
-		groupId: 5,
+		group: [5],
 		description:
 			'Описание правила, как используется, для чего нужно, что-то ещё. Описание правила, как используется, для чего нужно, что-то ещё.',
 		slug: 'prisoedinitelnie-pridatochnie',
@@ -226,7 +226,7 @@ export const rules = [
 	{
 		id: 29,
 		title: 'Условные придаточные',
-		groupId: 5,
+		group: [2],
 		description:
 			'Описание правила, как используется, для чего нужно, что-то ещё. Описание правила, как используется, для чего нужно, что-то ещё.',
 		slug: 'yslovnie-pridatochnie',
@@ -234,7 +234,7 @@ export const rules = [
 	{
 		id: 30,
 		title: 'Временные придаточные',
-		groupId: 5,
+		group: [2],
 		description:
 			'Описание правила, как используется, для чего нужно, что-то ещё. Описание правила, как используется, для чего нужно, что-то ещё.',
 		slug: 'vremennie-pridatochnie',
@@ -242,7 +242,7 @@ export const rules = [
 	{
 		id: 31,
 		title: 'Причинные придаточные',
-		groupId: 5,
+		group: [4],
 		description:
 			'Описание правила, как используется, для чего нужно, что-то ещё. Описание правила, как используется, для чего нужно, что-то ещё.',
 		slug: 'prichinnie-pridatochnie',
@@ -250,7 +250,7 @@ export const rules = [
 	{
 		id: 32,
 		title: 'Использование запятых, точек и других знаков препинания',
-		groupId: 6,
+		group: [6],
 		description:
 			'Описание правила, как используется, для чего нужно, что-то ещё. Описание правила, как используется, для чего нужно, что-то ещё.',
 		slug: 'icpolzovanie-zapyatih-tochek-i-drygih-znakov-prepinaniya',
@@ -258,7 +258,7 @@ export const rules = [
 	{
 		id: 33,
 		title: 'Сложноподчиненные предложения и их структура',
-		groupId: 6,
+		group: [6],
 		description:
 			'Описание правила, как используется, для чего нужно, что-то ещё. Описание правила, как используется, для чего нужно, что-то ещё.',
 		slug: 'slojnopodchinennie-predlojeniya-i-ih-stryktyra',

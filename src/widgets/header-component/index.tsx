@@ -4,7 +4,7 @@ import logo from '@shared/img/logo.svg';
 import SingIn from '@features/sing-in';
 import { Link } from 'react-router-dom';
 import './styles.css';
-import { wordsCompilations } from '@shared/constants/urls';
+import { rulesCompilations, wordsCompilations } from '@shared/constants/urls';
 
 const { Text } = Typography;
 const { Header } = Layout;
@@ -42,7 +42,7 @@ const HeaderComponent = () => {
 						<Button type="text">Подборки слов</Button>
 					</Link>
 
-					<Link to={'/rules-word-compilations'}>
+					<Link to={rulesCompilations}>
 						<Button type="text">Подборки правил</Button>
 					</Link>
 

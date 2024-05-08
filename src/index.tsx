@@ -6,9 +6,11 @@ import NotFound from '@pages/not-found';
 import Info from '@pages/info';
 import About from '@pages/about';
 import ContactUs from '@pages/contact-us';
-import { about, contactUs, wordsCompilations } from '@shared/constants/urls';
+import { about, contactUs, rulesCompilations, wordsCompilations } from '@shared/constants/urls';
 import WordCompilationsPage from '@pages/word-compilations-page';
-import Words from '@widgets/words';
+import Words from '@pages/words';
+import RulesCompilationsPage from '@pages/rules-compilations-page';
+import Rule from '@pages/rule';
 
 const router = createBrowserRouter([
 	{
@@ -25,8 +27,16 @@ const router = createBrowserRouter([
 				element: <WordCompilationsPage />,
 			},
 			{
+				path: `${rulesCompilations}/:groupTitle?`,
+				element: <RulesCompilationsPage />,
+			},
+			{
 				path: `${wordsCompilations}/:groupTitle/:compilationTitle/`,
 				element: <Words />,
+			},
+			{
+				path: `${rulesCompilations}/:groupTitle/:compilationTitle/`,
+				element: <Rule />,
 			},
 			{
 				path: about,

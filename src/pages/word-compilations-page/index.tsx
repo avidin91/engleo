@@ -4,9 +4,10 @@ import { Flex, Layout, Menu, MenuProps, Typography } from 'antd';
 import { headerHeight, minHeight, minHeightWithoutHeader } from '@shared/constants/constants';
 import { useNavigate, useParams } from 'react-router-dom';
 import { wordCompilationGroups } from '../../mocks/wordCompilationGroups';
-import Compilations from '../../entities/word-compilations';
 import { wordsCompilations } from '@shared/constants/urls';
 import useScrollToTop from '@shared/hooks/useScrollToTop';
+import CompilationMini from '@entities/compilation-mini';
+import { wordCompilations } from '../../mocks/wordCompilations';
 
 const { Sider, Content } = Layout;
 const { Title } = Typography;
@@ -35,6 +36,8 @@ const WordCompilationsPage = () => {
 		navigate(slug ? `/${wordsCompilations}/${slug}` : `/${wordsCompilations}`);
 	};
 
+	const newCompilations = wordCompilations.filter((c) => c.group.includes(currentGroup));
+
 	return (
 		<>
 			<Helmet>
@@ -62,30 +65,65 @@ const WordCompilationsPage = () => {
 				</Sider>
 				<Content style={{ padding: '16px 0' }}>
 					<Flex align="center" vertical>
-						<div>
-							{currentGroup === 6 ? (
-								<Flex vertical align="center">
-									<Title style={{ margin: 0 }}>Подборки слов</Title>
+						{currentGroup === 6 ? (
+							<>
+								<Title style={{ margin: 0 }}>Подборки слов</Title>
+
+								<Flex vertical align="center" gap={32}>
 									{wordCompilationGroups.map((compilation, groupNumber) => {
+										const newCompilations = wordCompilations.filter((c) =>
+											c.group.includes(groupNumber),
+										);
+										return newCompilations.map((compil, i) => {
+											return (
+												groupNumber !== 6 && (
+													<>
+														{i === 0 && (
+															<Title
+																level={3}
+																style={{
+																	textAlign: 'center',
+																	color: '#595959',
+																}}
+															>
+																{compilation.title}
+															</Title>
+														)}
+														<CompilationMini
+															groupSlug={compilation.slug}
+															parentLink={wordsCompilations}
+															key={groupNumber}
+															entity={compil}
+															tag
+														/>
+													</>
+												)
+											);
+										});
+									})}
+								</Flex>
+							</>
+						) : (
+							<>
+								<Title level={1} style={{ textAlign: 'center' }}>
+									{compilationFromUrl.title}
+								</Title>
+								<Flex vertical gap={32}>
+									{newCompilations.map((compil, i) => {
 										return (
-											groupNumber !== 6 && (
-												<Compilations
-													title={compilation.title}
-													group={compilation.group}
-													key={groupNumber}
+											<>
+												<CompilationMini
+													groupSlug={compilationFromUrl.slug}
+													parentLink={wordsCompilations}
+													entity={compil}
+													tag
 												/>
-											)
+											</>
 										);
 									})}
 								</Flex>
-							) : (
-								<Compilations
-									title={wordCompilationGroups[currentGroup!].title}
-									group={wordCompilationGroups[currentGroup!].group}
-									h1
-								/>
-							)}
-						</div>
+							</>
+						)}
 					</Flex>
 				</Content>
 			</Layout>
