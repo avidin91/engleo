@@ -89,7 +89,7 @@ export const wordCompilations = [
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
 		image,
-		group: [0, 1],
+		group: [1],
 		slug: 'viragenia-pohvali',
 	},
 	{
@@ -278,7 +278,7 @@ export const wordCompilations = [
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
 		image,
-		group: [0],
+		group: [2],
 		slug: 'viragenia-pohvali',
 	},
 	{
@@ -287,7 +287,7 @@ export const wordCompilations = [
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
 		image,
-		group: [0, 1, 2, 3, 4],
+		group: [1, 2, 3, 4],
 		slug: 'viragenia-pohvali',
 	},
 	{
@@ -296,7 +296,7 @@ export const wordCompilations = [
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
 		image,
-		group: [0, 1, 2, 3, 4],
+		group: [1, 2, 3, 4],
 		slug: 'viragenia-pohvali',
 	},
 	{
@@ -305,7 +305,7 @@ export const wordCompilations = [
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
 		image,
-		group: [0, 1, 2, 3, 4],
+		group: [1, 2, 3, 4],
 		slug: 'viragenia-pohvali',
 	},
 	{
@@ -314,7 +314,7 @@ export const wordCompilations = [
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
 		image,
-		group: [0, 1, 2, 3, 4],
+		group: [1, 2, 3, 4],
 		slug: 'viragenia-pohvali',
 	},
 	{
@@ -323,7 +323,7 @@ export const wordCompilations = [
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
 		image,
-		group: [0, 1, 2, 3, 4],
+		group: [1, 2, 3, 4],
 		slug: 'viragenia-pohvali',
 	},
 	{
@@ -332,7 +332,7 @@ export const wordCompilations = [
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
 		image,
-		group: [0, 1, 2, 3, 4],
+		group: [1, 2, 3, 4],
 		slug: 'viragenia-pohvali',
 	},
 	{
@@ -341,7 +341,7 @@ export const wordCompilations = [
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
 		image,
-		group: [0, 1, 2, 3, 4],
+		group: [1, 2, 3, 4],
 		slug: 'viragenia-pohvali',
 	},
 	{
@@ -350,7 +350,7 @@ export const wordCompilations = [
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
 		image,
-		group: [0, 1, 2, 3, 4],
+		group: [1, 2, 3, 4],
 		slug: 'viragenia-pohvali',
 	},
 ];

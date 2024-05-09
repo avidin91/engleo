@@ -5,4 +5,5 @@ export enum CompilationsTags {
 	'fourth',
 	'five',
 	'six',
+	'seven',
 }

@@ -2,7 +2,7 @@ export const newRules = [
 	{
 		id: 1,
 		title: 'Алфавит и произношение',
-		group: [0],
+		group: [1],
 		description:
 			'Описание правила, как используется, для чего нужно, что-то ещё. Описание правила, как используется, для чего нужно, что-то ещё.',
 		slug: 'alfavit-i-proiznoshenie',
@@ -10,7 +10,7 @@ export const newRules = [
 	{
 		id: 2,
 		title: 'Части речи (существительные, прилагательные, глаголы и т.д.)',
-		group: [0],
+		group: [1],
 		description:
 			'Описание правила, как используется, для чего нужно, что-то ещё. Описание правила, как используется, для чего нужно, что-то ещё.',
 		slug: 'chasti-rechi-syshestvitilnie-prilagatelnie-glagoli-i-t-d',
@@ -114,7 +114,7 @@ export const newRules = [
 	{
 		id: 15,
 		title: 'Будущее совершенное продолженное время (Future Perfect Continuous)',
-		group: [0],
+		group: [1],
 		description:
 			'Описание правила, как используется, для чего нужно, что-то ещё. Описание правила, как используется, для чего нужно, что-то ещё.',
 		slug: 'bydyshee-sovershennoe-prodoljitelnoe-vremya-future-perfect-continious',

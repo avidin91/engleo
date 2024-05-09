@@ -28,6 +28,8 @@ const CompilationMini: FC<TCompilationMini> = ({ small, entity, groupSlug, paren
 	const linkToGroup = `/${parentLink}/${groupSlug}`;
 	const linkToEntity = `/${parentLink}/${groupSlug}/${entity.slug}`;
 
+	// console.log('linkToEntity = ', linkToEntity);
+
 	return (
 		<>
 			<Flex vertical gap={16} align="center">

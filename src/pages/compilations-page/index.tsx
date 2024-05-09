@@ -8,7 +8,7 @@ import { wordCompilations } from '../../mocks/wordCompilations';
 import { newRulesGroups } from '../../mocks/newRulesGroups';
 import { newWordCompilationGroups } from '../../mocks/newWordCompilationGroups';
 import { newRules } from '../../mocks/newRules';
-import CompilationMini from '@entities/compilation-mini';
+import CompilationFull from '@entities/compilation-full';
 
 const { Title } = Typography;
 
@@ -86,59 +86,32 @@ const CompilationsPage = () => {
 								</Title>
 
 								<Flex vertical align="center" gap={32}>
-									{compilationsGroups.map((compilation, groupNumber) => {
-										const newCompilations = compilationsByUrls.filter((c) =>
-											c.group.includes(groupNumber),
-										);
-										return newCompilations.map((compil, i) => {
-											return (
-												groupNumber !== 6 && (
-													<Fragment key={compil.slug}>
-														{i === 0 && (
-															<Title
-																level={3}
-																style={{
-																	textAlign: 'center',
-																	color: '#595959',
-																}}
-															>
-																{compilation.title}
-															</Title>
-														)}
-														<CompilationMini
-															groupSlug={compilation.slug}
-															parentLink={wordsCompilations}
-															key={groupNumber}
-															entity={compil}
-															tag
-														/>
-													</Fragment>
-												)
+									{compilationsGroups.map((group) => {
+										const compilationsFilteredByGroup =
+											compilationsByUrls.filter((c) =>
+												c.group.includes(group.group),
 											);
-										});
+
+										return (
+											group.group !== 0 && (
+												<CompilationFull
+													key={group.slug}
+													title={group.title}
+													groupSlug={group.slug}
+													compilation={compilationsFilteredByGroup}
+												/>
+											)
+										);
 									})}
 								</Flex>
 							</>
 						) : (
-							<>
-								<Title level={1} style={{ textAlign: 'center' }}>
-									{currentGroupByUrl!.title}
-								</Title>
-								<Flex vertical gap={32}>
-									{currentCompilation.map((compil) => {
-										return (
-											<>
-												<CompilationMini
-													groupSlug={currentGroupByUrl!.slug}
-													parentLink={wordsCompilations}
-													entity={compil}
-													tag
-												/>
-											</>
-										);
-									})}
-								</Flex>
-							</>
+							<CompilationFull
+								title={currentGroupByUrl!.title}
+								groupSlug={currentGroupByUrl!.slug}
+								compilation={currentCompilation}
+								h1
+							/>
 						)}
 					</Flex>
 				</Content>
