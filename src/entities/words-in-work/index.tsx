@@ -3,7 +3,6 @@ import { Button, Flex, Image, message, Progress, theme, Typography } from 'antd'
 import { PlayCircleTwoTone } from '@ant-design/icons';
 import useVoice from '../../shared/hooks/useVoice';
 import { TWord } from '@shared/types';
-import useScrollToTop from '@shared/hooks/useScrollToTop';
 
 const { Text } = Typography;
 
@@ -66,7 +65,6 @@ type TWordsInWork = {
 };
 
 const WordsInWork = ({ compilation }: TWordsInWork) => {
-	useScrollToTop();
 	const { token } = theme.useToken();
 	const [current, setCurrent] = useState(0);
 	const [progress, setProgress] = useState<number>(0);

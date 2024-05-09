@@ -38,11 +38,12 @@ const HeaderComponent = () => {
 				</Flex>
 
 				<Flex align="center" gap={8}>
-					<Link to={wordsCompilations}>
+					{/*TODO удалить reloadDocument*/}
+					<Link to={wordsCompilations} reloadDocument>
 						<Button type="text">Подборки слов</Button>
 					</Link>
-
-					<Link to={rulesCompilations}>
+					{/*TODO удалить reloadDocument*/}
+					<Link to={rulesCompilations} reloadDocument>
 						<Button type="text">Подборки правил</Button>
 					</Link>
 

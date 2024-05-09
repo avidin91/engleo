@@ -2,10 +2,12 @@ import React from 'react';
 import { ConfigProvider } from 'antd';
 import Main from '../pages/main';
 import './styles.css';
+import { ScrollRestoration } from 'react-router-dom';
 
 const App = () => {
 	return (
 		<>
+			<ScrollRestoration />
 			<ConfigProvider
 				theme={{
 					components: {

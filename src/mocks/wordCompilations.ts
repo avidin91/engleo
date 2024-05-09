@@ -8,7 +8,7 @@ export const wordCompilations = [
 		description:
 			'Описание, для чего нужно учить эти слова, каких в них фразы, а так же слова для поисковых машин',
 		image,
-		group: [1, 1, 1],
+		group: [1],
 		slug: 'viragenia-pohvali-gruppa-0',
 	},
 	{
@@ -125,7 +125,7 @@ export const wordCompilations = [
 		titleInEnglish: 'Praise and encouragement',
 		description: 'Compilation 1',
 		image,
-		group: [0, 5],
+		group: [6],
 		slug: 'viragenia-pohvali',
 	},
 	{

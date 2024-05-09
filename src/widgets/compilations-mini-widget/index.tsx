@@ -24,7 +24,7 @@ const CompilationsMiniWidget: FC<TCompilationsMiniWidget> = ({ groups, parentLin
 
 	return (
 		<Card style={{ width: 584 }} title={title}>
-			{groups.slice(0, 4).map(({ title, group, slug }) => {
+			{groups.slice(1, 5).map(({ title, group, slug }) => {
 				const newEntity = entity.filter((c) => c.group.includes(group));
 				return (
 					<>

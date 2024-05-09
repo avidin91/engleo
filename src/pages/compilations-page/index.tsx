@@ -3,45 +3,59 @@ import { Helmet } from 'react-helmet';
 import { Flex, Layout, Menu, MenuProps, Typography } from 'antd';
 import { headerHeight, minHeight, minHeightWithoutHeader } from '@shared/constants/constants';
 import { useNavigate, useParams } from 'react-router-dom';
-import { wordCompilationGroups } from '../../mocks/wordCompilationGroups';
 import { wordsCompilations } from '@shared/constants/urls';
-import useScrollToTop from '@shared/hooks/useScrollToTop';
-import CompilationMini from '@entities/compilation-mini';
 import { wordCompilations } from '../../mocks/wordCompilations';
+import { newRulesGroups } from '../../mocks/newRulesGroups';
+import { newWordCompilationGroups } from '../../mocks/newWordCompilationGroups';
+import { newRules } from '../../mocks/newRules';
+import CompilationMini from '@entities/compilation-mini';
 
-const { Sider, Content } = Layout;
 const { Title } = Typography;
 
-const items: MenuProps['items'] = wordCompilationGroups.map((compilation) => ({
-	key: compilation.group,
-	label: compilation.title,
-}));
+const { Sider, Content } = Layout;
 
-const WordCompilationsPage = () => {
-	useScrollToTop();
+const CompilationsPage = () => {
 	const navigate = useNavigate();
-	const { groupTitle } = useParams();
-	const [compilationFromUrl] = wordCompilationGroups.filter((group) => group.slug === groupTitle);
+	const { compilations, groupTitle } = useParams();
 
-	const [currentGroup, setCurrentGroup] = useState(groupTitle ? compilationFromUrl.group : 6);
+	const isWordCompilationPage = compilations === wordsCompilations;
+
+	const compilationsGroups = isWordCompilationPage ? newWordCompilationGroups : newRulesGroups;
+
+	const compilationsByUrls = isWordCompilationPage ? wordCompilations : newRules;
+
+	const menuItems: MenuProps['items'] = compilationsGroups.map((compilation) => ({
+		key: compilation.group,
+		label: compilation.title,
+	}));
+
+	const numberOfCurrentGroupByUrl = groupTitle
+		? compilationsGroups.find((group) => group.slug === groupTitle)?.group
+		: 0;
+
+	const [currentGroup, setCurrentGroup] = useState(numberOfCurrentGroupByUrl);
 
 	const onMenuSelect = ({ key }: { key: string }) => {
 		const keyNumber = Number(key);
-		const [wordCompilationGroup] = wordCompilationGroups.filter(
+		const [wordCompilationGroup] = compilationsGroups.filter(
 			(item) => item.group === keyNumber,
 		);
-		const slug = wordCompilationGroup.slug;
 
+		const slug = wordCompilationGroup.slug;
 		setCurrentGroup(keyNumber);
-		navigate(slug ? `/${wordsCompilations}/${slug}` : `/${wordsCompilations}`);
+		navigate(slug ? `/${compilations}/${slug}` : `/${compilations}`);
 	};
 
-	const newCompilations = wordCompilations.filter((c) => c.group.includes(currentGroup));
+	const currentCompilation = compilationsByUrls.filter((compilation) =>
+		compilation.group.includes(currentGroup ? currentGroup : 0),
+	);
+
+	const currentGroupByUrl = compilationsGroups.find((group) => group.slug === groupTitle);
 
 	return (
 		<>
 			<Helmet>
-				<title>Подборки слов</title>
+				<title>{isWordCompilationPage ? 'Подборки слов' : 'Подборки правил'}</title>
 			</Helmet>
 			<Layout hasSider style={{ minHeight }}>
 				<Sider
@@ -57,7 +71,7 @@ const WordCompilationsPage = () => {
 					}}
 				>
 					<Menu
-						items={items}
+						items={menuItems}
 						theme="dark"
 						defaultSelectedKeys={[`${currentGroup}`]}
 						onSelect={onMenuSelect}
@@ -65,13 +79,15 @@ const WordCompilationsPage = () => {
 				</Sider>
 				<Content style={{ padding: '16px 0' }}>
 					<Flex align="center" vertical>
-						{currentGroup === 6 ? (
+						{currentGroup === 0 ? (
 							<>
-								<Title style={{ margin: 0 }}>Подборки слов</Title>
+								<Title style={{ margin: 0 }}>
+									{isWordCompilationPage ? 'Подборки слов' : 'Подборки правил'}
+								</Title>
 
 								<Flex vertical align="center" gap={32}>
-									{wordCompilationGroups.map((compilation, groupNumber) => {
-										const newCompilations = wordCompilations.filter((c) =>
+									{compilationsGroups.map((compilation, groupNumber) => {
+										const newCompilations = compilationsByUrls.filter((c) =>
 											c.group.includes(groupNumber),
 										);
 										return newCompilations.map((compil, i) => {
@@ -106,14 +122,14 @@ const WordCompilationsPage = () => {
 						) : (
 							<>
 								<Title level={1} style={{ textAlign: 'center' }}>
-									{compilationFromUrl.title}
+									{currentGroupByUrl!.title}
 								</Title>
 								<Flex vertical gap={32}>
-									{newCompilations.map((compil, i) => {
+									{currentCompilation.map((compil, i) => {
 										return (
 											<>
 												<CompilationMini
-													groupSlug={compilationFromUrl.slug}
+													groupSlug={currentGroupByUrl!.slug}
 													parentLink={wordsCompilations}
 													entity={compil}
 													tag
@@ -131,4 +147,4 @@ const WordCompilationsPage = () => {
 	);
 };
 
-export default WordCompilationsPage;
+export default CompilationsPage;

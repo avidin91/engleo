@@ -4,9 +4,9 @@ import { Card, Flex, Typography, Image } from 'antd';
 import statistic from '@shared/img/Статистика.png';
 import SingIn from '@features/sing-in';
 import CompilationsMiniWidget from '@widgets/compilations-mini-widget';
-import { wordCompilationGroups } from '../../mocks/wordCompilationGroups';
 import { rulesCompilations, wordsCompilations } from '@shared/constants/urls';
-import { rulesGroups } from '../../mocks/rulesGroups';
+import { newWordCompilationGroups } from '../../mocks/newWordCompilationGroups';
+import { newRulesGroups } from '../../mocks/newRulesGroups';
 
 const { Title, Text } = Typography;
 
@@ -34,12 +34,12 @@ const Info = () => {
 				<Flex gap={32} flex={1}>
 					<CompilationsMiniWidget
 						title="Слова"
-						groups={wordCompilationGroups}
+						groups={newWordCompilationGroups}
 						parentLink={wordsCompilations}
 					/>
 					<CompilationsMiniWidget
 						title="Правила"
-						groups={rulesGroups}
+						groups={newRulesGroups}
 						parentLink={rulesCompilations}
 					/>
 				</Flex>

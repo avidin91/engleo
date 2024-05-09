@@ -7,10 +7,9 @@ import Info from '@pages/info';
 import About from '@pages/about';
 import ContactUs from '@pages/contact-us';
 import { about, contactUs, rulesCompilations, wordsCompilations } from '@shared/constants/urls';
-import WordCompilationsPage from '@pages/word-compilations-page';
 import Words from '@pages/words';
-import RulesCompilationsPage from '@pages/rules-compilations-page';
 import Rule from '@pages/rule';
+import CompilationsPage from '@pages/compilations-page';
 
 const router = createBrowserRouter([
 	{
@@ -23,12 +22,8 @@ const router = createBrowserRouter([
 				element: <Info />,
 			},
 			{
-				path: `${wordsCompilations}/:groupTitle?`,
-				element: <WordCompilationsPage />,
-			},
-			{
-				path: `${rulesCompilations}/:groupTitle?`,
-				element: <RulesCompilationsPage />,
+				path: `/:compilations/:groupTitle?`,
+				element: <CompilationsPage />,
 			},
 			{
 				path: `${wordsCompilations}/:groupTitle/:compilationTitle/`,
