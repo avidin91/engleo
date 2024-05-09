@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Flex, Layout, Menu, MenuProps, Typography } from 'antd';
 import { headerHeight, minHeight, minHeightWithoutHeader } from '@shared/constants/constants';
@@ -93,7 +93,7 @@ const CompilationsPage = () => {
 										return newCompilations.map((compil, i) => {
 											return (
 												groupNumber !== 6 && (
-													<>
+													<Fragment key={compil.slug}>
 														{i === 0 && (
 															<Title
 																level={3}
@@ -112,7 +112,7 @@ const CompilationsPage = () => {
 															entity={compil}
 															tag
 														/>
-													</>
+													</Fragment>
 												)
 											);
 										});
@@ -125,7 +125,7 @@ const CompilationsPage = () => {
 									{currentGroupByUrl!.title}
 								</Title>
 								<Flex vertical gap={32}>
-									{currentCompilation.map((compil, i) => {
+									{currentCompilation.map((compil) => {
 										return (
 											<>
 												<CompilationMini
