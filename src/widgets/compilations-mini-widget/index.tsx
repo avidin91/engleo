@@ -1,11 +1,11 @@
-import React, { FC } from 'react';
+import React, { FC, Fragment } from 'react';
 import { Card, Typography } from 'antd';
 import CompilationMini from '@entities/compilation-mini';
 import { wordsCompilations } from '@shared/constants/urls';
 import { wordCompilations } from '../../mocks/wordCompilations';
 import { newRules } from '../../mocks/newRules';
 
-const { Title, Text } = Typography;
+const { Title } = Typography;
 
 type TGroups = {
 	title: string;
@@ -27,7 +27,7 @@ const CompilationsMiniWidget: FC<TCompilationsMiniWidget> = ({ groups, parentLin
 			{groups.slice(1, 5).map(({ title, group, slug }) => {
 				const newEntity = entity.filter((c) => c.group.includes(group));
 				return (
-					<>
+					<Fragment key={slug}>
 						<Title level={3} style={{ textAlign: 'center' }}>
 							{title}
 						</Title>
@@ -38,7 +38,7 @@ const CompilationsMiniWidget: FC<TCompilationsMiniWidget> = ({ groups, parentLin
 							entity={newEntity[0]}
 							parentLink={parentLink}
 						/>
-					</>
+					</Fragment>
 				);
 			})}
 		</Card>
