@@ -33,6 +33,7 @@
     "@ant-design/icons": "^5.3.6",
     "@types/react-helmet": "^6.1.11",
     "antd": "^5.16.0",
+    "axios": "^1.6.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",

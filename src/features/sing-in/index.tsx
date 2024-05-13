@@ -3,6 +3,7 @@ import { Avatar, Button, Checkbox, Flex, Form, Input, Modal, Typography } from '
 import Link from 'antd/es/typography/Link';
 import vkLogo from '@shared/img/vk-logo.png';
 import yaLogo from '@shared/img/ya-logo.png';
+import axios from 'axios';
 
 const { Title, Text } = Typography;
 
@@ -30,6 +31,23 @@ const SingIn: FC<TSingIn> = ({ text, button }) => {
 
 	const handleCancel = () => {
 		setIsModalOpen(false);
+	};
+
+	const onCreateUser = async (i: any) => {
+		console.log('i = ', i);
+		// const { data } = await axios.post(
+		// 	'http://localhost:3009/api/user',
+		// 	{
+		// 		email: 'Fred@Flintstone.ru',
+		// 		password: 'Flintstone123',
+		// 	},
+		// 	{
+		// 		headers: {
+		// 			'Content-Type': 'application/json',
+		// 		},
+		// 	},
+		// );
+		// console.log('data = ', data);
 	};
 
 	return (
@@ -84,7 +102,7 @@ const SingIn: FC<TSingIn> = ({ text, button }) => {
 							Войти
 						</Button>
 						<Link>Не помню пароль</Link>
-						<Button size="large" style={{ width: '300px' }}>
+						<Button size="large" style={{ width: '300px' }} onClick={onCreateUser}>
 							Создать профиль
 						</Button>
 						<Text type="secondary">Войти с помощью</Text>
